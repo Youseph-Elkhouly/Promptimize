@@ -1,0 +1,90 @@
+[
+  {
+    "id": "call_001",
+    "timestamp": "2026-05-10T08:12:04Z",
+    "fn": "analyzeTaskPriority",
+    "model": "gemini-1.5-flash",
+    "inputTokens": 134,
+    "outputTokens": 97,
+    "costUSD": 0.0000390,
+    "status": "success",
+    "promptSnippet": "Analyze these tasks and rank them by urgency: Buy groceries, Walk the dog, Fix the bug..."
+  },
+  {
+    "id": "call_002",
+    "timestamp": "2026-05-10T08:12:07Z",
+    "fn": "generateCompletionNote",
+    "model": "gemini-1.5-flash",
+    "inputTokens": 62,
+    "outputTokens": 41,
+    "costUSD": 0.0000169,
+    "status": "success",
+    "promptSnippet": "Write a short completion note for task: Buy groceries..."
+  },
+  {
+    "id": "call_003",
+    "timestamp": "2026-05-10T09:45:31Z",
+    "fn": "analyzeTaskPriority",
+    "model": "gemini-1.5-flash",
+    "inputTokens": 198,
+    "outputTokens": 114,
+    "costUSD": 0.0000491,
+    "status": "success",
+    "promptSnippet": "Analyze these tasks and rank them by urgency: Walk the dog, Fix the bug, Review PR..."
+  },
+  {
+    "id": "call_004",
+    "timestamp": "2026-05-10T09:46:02Z",
+    "fn": "generateCompletionNote",
+    "model": "gemini-1.5-flash",
+    "inputTokens": 58,
+    "outputTokens": 39,
+    "costUSD": 0.0000161,
+    "status": "success",
+    "promptSnippet": "Write a short completion note for task: Walk the dog..."
+  },
+  {
+    "id": "call_005",
+    "timestamp": "2026-05-10T11:03:18Z",
+    "fn": "analyzeTaskPriority",
+    "model": "gemini-1.5-flash",
+    "inputTokens": 221,
+    "outputTokens": 139,
+    "costUSD": 0.0000582,
+    "status": "success",
+    "promptSnippet": "Analyze these tasks and rank them by urgency: Fix the bug, Review PR, Deploy hotfix..."
+  },
+  {
+    "id": "call_006",
+    "timestamp": "2026-05-10T11:03:21Z",
+    "fn": "suggestTaskTitle",
+    "model": "gemini-1.5-flash",
+    "inputTokens": 44,
+    "outputTokens": 12,
+    "costUSD": 0.0000070,
+    "status": "success",
+    "promptSnippet": "Suggest a concise title for: fix the bug in the login flow that breaks on Safari..."
+  },
+  {
+    "id": "call_007",
+    "timestamp": "2026-05-10T13:28:44Z",
+    "fn": "analyzeTaskPriority",
+    "model": "gemini-1.5-flash",
+    "inputTokens": 167,
+    "outputTokens": 88,
+    "costUSD": 0.0000389,
+    "status": "error",
+    "promptSnippet": "Analyze these tasks and rank them by urgency: Deploy hotfix, Write tests, Update docs..."
+  },
+  {
+    "id": "call_008",
+    "timestamp": "2026-05-10T14:55:09Z",
+    "fn": "generateCompletionNote",
+    "model": "gemini-1.5-flash",
+    "inputTokens": 71,
+    "outputTokens": 44,
+    "costUSD": 0.0000188,
+    "status": "success",
+    "promptSnippet": "Write a short completion note for task: Fix the bug..."
+  }
+]

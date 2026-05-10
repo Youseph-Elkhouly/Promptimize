@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #000000;
+  --card: #0d0d0d;
+  --border: #1a1a1a;
+  --border-hi: #2a2a2a;
+  --text: #ffffff;
+  --text-dim: #888888;
+  --text-muted: #444444;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; }
+::-webkit-scrollbar-thumb:hover { background: #444; }
+
+/* Mono code blocks */
+pre, code { font-family: 'SF Mono', 'Fira Code', monospace; }
+
+/* Input base */
+input, textarea, select {
+  background: #000;
+  color: #fff;
+  border: 1px solid #1a1a1a;
+  border-radius: 4px;
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #fff;
+}

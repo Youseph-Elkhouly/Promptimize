@@ -1,0 +1,113 @@
+{
+  "name": "promptimize",
+  "displayName": "Promptimize",
+  "description": "Optimize prompts before they cost you. Scan, analyze, and reduce AI prompt token costs.",
+  "version": "0.1.0",
+  "publisher": "promptimize",
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": ["Linters", "Other"],
+  "activationEvents": [
+    "onView:promptimize.promptPanel",
+    "onLanguage:typescript",
+    "onLanguage:javascript",
+    "onLanguage:python"
+  ],
+  "capabilities": {
+    "languageModelAccess": true
+  },
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "promptimize-panel",
+          "title": "Promptimize",
+          "icon": "$(zap)"
+        }
+      ]
+    },
+    "views": {
+      "promptimize-panel": [
+        {
+          "id": "promptimize.promptPanel",
+          "name": "Prompt Optimizer",
+          "type": "webview"
+        }
+      ]
+    },
+    "chatParticipants": [
+      {
+        "id": "promptimize.chat",
+        "name": "promptimize",
+        "description": "Analyze token cost and optimize your prompt before sending it to AI",
+        "isSticky": false
+      }
+    ],
+    "commands": [
+      {
+        "command": "promptimize.scanWorkspace",
+        "title": "Promptimize: Scan Workspace"
+      },
+      {
+        "command": "promptimize.optimizeSelected",
+        "title": "Promptimize: Optimize Selected Prompt"
+      },
+      {
+        "command": "promptimize.showCostReport",
+        "title": "Promptimize: Show Cost Report"
+      },
+      {
+        "command": "promptimize.runCostDiff",
+        "title": "Promptimize: Run CostDiff"
+      },
+      {
+        "command": "promptimize.openDashboard",
+        "title": "Promptimize: Open Dashboard"
+      }
+    ],
+    "configuration": {
+      "title": "Promptimize",
+      "properties": {
+        "promptimize.backendUrl": {
+          "type": "string",
+          "default": "http://localhost:8000",
+          "description": "URL of the Promptimize backend API"
+        },
+        "promptimize.monthlyCallEstimate": {
+          "type": "number",
+          "default": 10000,
+          "description": "Estimated number of AI API calls per month for cost projection"
+        },
+        "promptimize.costBudget": {
+          "type": "number",
+          "default": 100,
+          "description": "Monthly AI cost budget in USD"
+        },
+        "promptimize.enableInlineWarnings": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show inline cost warnings in the editor"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "build": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.95.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "esbuild": "^0.24.0",
+    "@vscode/vsce": "^3.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.0"
+  }
+}

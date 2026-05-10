@@ -1,0 +1,21 @@
+{
+  "name": "promptimize",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Optimize prompts before they cost you.",
+  "scripts": {
+    "dev:backend": "cd web-dashboard/backend && uvicorn app.main:app --reload --port 8000",
+    "dev:frontend": "cd web-dashboard/frontend && npm run dev",
+    "dev:extension": "cd vscode-extension && npm run compile",
+    "install:backend": "cd web-dashboard/backend && pip install -r requirements.txt",
+    "install:frontend": "cd web-dashboard/frontend && npm install",
+    "install:extension": "cd vscode-extension && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend && npm run install:extension",
+    "cost-diff": "npx ts-node scripts/run-cost-diff.ts",
+    "seed": "cd web-dashboard/backend && python -m scripts.seed_demo_data"
+  },
+  "workspaces": [
+    "web-dashboard/frontend",
+    "vscode-extension"
+  ]
+}

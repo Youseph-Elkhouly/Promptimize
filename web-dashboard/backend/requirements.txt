@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+pydantic>=2.9
+pydantic-settings>=2.5
+motor
+pymongo
+python-dotenv
+httpx
+google-generativeai
+python-multipart
+# tiktoken is optional — falls back to character-based token estimation if unavailable
+# tiktoken
